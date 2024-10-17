@@ -39,7 +39,7 @@ const LogIn = () => {
               <Link to='/forgot-password'>Forgot Password?</Link>
                <div>
                 <label className='relative' htmlFor="rem">Remember Me</label>
-                <input type="checkbox" id='rem' name='rem' />
+                <input type="checkbox" id='remember' name='rem' />
                </div>
             </div>
           </form>
