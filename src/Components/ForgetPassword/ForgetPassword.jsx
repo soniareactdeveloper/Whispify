@@ -30,7 +30,7 @@ const ForgetPassword = () => {
             <div className='backToLoginLink'>
               <p>Remember your password? <Link to="/login">Sign in</Link></p>
             </div>
-
+            <h1>hello</h1>
           </form>
         </div>
       </div>
