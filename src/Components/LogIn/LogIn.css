@@ -3,7 +3,7 @@
 }
 
 .loginContent {
-  @apply max-w-lg w-full p-8 rounded-lg shadow-md bg-[#fff] flex flex-col items-center;
+  @apply max-w-lg w-full p-8 rounded-lg shadow-md bg-white flex flex-col items-center;
 }
 
 .logLogo img {
@@ -22,35 +22,59 @@
   @apply w-[320px];
 }
 
-.logForm label:not(:last-child) {
-  @apply absolute top-[10%] right-[50%] bg-[#fff] p-1 w-[150px] text-center text-[12px] text-[#11175D] font-roboto font-medium;
+.inputContainer {
+  @apply relative h-[40px] leading-[40px] mb-6;
 }
 
-.logForm input {
-  @apply w-full p-[14px] rounded-lg border-[2px] border-gray-300 focus:outline-none text-sm font-roboto;
+.inputField {
+  @apply w-full text-[18px] font-roboto font-semibold absolute leading-[40px] bg-transparent px-[30px] py-0 outline-none rounded-md;
+  border: 1px solid #666;
+  transition: all 0.3s ease;
+  z-index: 1111;
 }
 
-.logForm input:focus {
-  animation: borderAnimation 5s forwards infinite;
+.inputLabel {
+  @apply absolute text-[18px] text-[#666] px-[30px] font-roboto bg-white;
+  line-height: 40px;
+  transition: all 0.3s ease;
 }
 
-@keyframes borderAnimation {
-  0% {
-    border-color: #afa7a7;
-  }
-  50% {
-    border-color: #3f46d1;
-  }
-  100% {
-    border-color: #afa7a7;
-  }
+.inputField:focus,
+.inputField:valid {
+  color: #4855e0;
+  border-color: #4855e0;
+}
+
+.inputField:focus + .inputLabel,
+.inputField:valid + .inputLabel {
+  color: #4855e0;
+  height: 20px;
+  line-height: 20px;
+  transform: translate(-1px, -15px) scale(0.80);
+  z-index: 1111;
+}
+
+.rememberMe {
+  @apply flex items-center text-[#666] text-sm;
+}
+
+.rememberMe input {
+  @apply mr-2;
 }
 
 .logBtn {
-  @apply w-full p-[14px] rounded-[40px] bg-[#64B5F6] text-center mt-[30px];
+  @apply w-full p-[14px] rounded-[40px] bg-[#64B5F6] text-center mt-[20px];
 }
 
-.logBtn a {
+.logBtn button {
   @apply text-white font-medium font-roboto;
 }
 
+.forgotPassword,
+.signupLink {
+  @apply text-[#4855e0] text-sm font-roboto;
+}
+
+.signupLink {
+  @apply text-center mt-4;
+}

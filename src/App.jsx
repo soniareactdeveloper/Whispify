@@ -3,9 +3,10 @@ import './App.css';
 import React from 'react';
 
 // Lazy-loaded components
-const Home     = React.lazy(()  => import('./Pages/HomePage'));
-const Login    = React.lazy(()  => import('./Pages/LogPage'));
-const Register = React.lazy(()  => import('./Pages/RegisterPage')); 
+const Home            = React.lazy(()  => import('./Pages/HomePage'));
+const Login           = React.lazy(()  => import('./Pages/LogPage'));
+const Register        = React.lazy(()  => import('./Pages/RegisterPage')); 
+const ForgetPassword  = React.lazy(()  => import('./Pages/ForgetPasswordPage'));
 
 
 function App() {
@@ -13,9 +14,10 @@ function App() {
   const routes = createBrowserRouter(
     createRoutesFromElements(
       <Route>
-        <Route path="/"         element={<Login />} />
-        <Route path="/register" element={<Register/>} />
-        <Route path="/home"     element={<Home />} />
+        <Route path="/login"                        element={<Login />} />
+        <Route path="/register"               element={<Register/>} />
+        <Route path="/home"                   element={<Home />} />
+        <Route path="/forgot-password"         element={<ForgetPassword />} />  
       </Route>
     )
   );

@@ -1,8 +1,11 @@
+import Register from "../Components/Register/Register"
 
 
 const RegisterPage = () => {
   return (
-    <div>RegisterPage</div>
+    <>
+     <Register/>
+    </>
   )
 }
 
