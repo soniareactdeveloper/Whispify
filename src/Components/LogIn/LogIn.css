@@ -1,0 +1,56 @@
+.mainLoginDiv {
+  @apply flex justify-center items-center w-full h-screen bg-[rgba(232,227,227,0.68)];
+}
+
+.loginContent {
+  @apply max-w-lg w-full p-8 rounded-lg shadow-md bg-[#fff] flex flex-col items-center;
+}
+
+.logLogo img {
+  @apply w-[30px] h-[30px];
+}
+
+.loginContent h1 {
+  @apply text-4xl text-[#11175D] font-bold font-roboto text-center mb-[11px] mt-[18px];
+}
+
+.loginContent p {
+  @apply text-sm text-[#858585] text-center font-roboto mb-12;
+}
+
+.logForm {
+  @apply w-[320px];
+}
+
+.logForm label:not(:last-child) {
+  @apply absolute top-[10%] right-[50%] bg-[#fff] p-1 w-[150px] text-center text-[12px] text-[#11175D] font-roboto font-medium;
+}
+
+.logForm input {
+  @apply w-full p-[14px] rounded-lg border-[2px] border-gray-300 focus:outline-none text-sm font-roboto;
+}
+
+.logForm input:focus {
+  animation: borderAnimation 5s forwards infinite;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #afa7a7;
+  }
+  50% {
+    border-color: #3f46d1;
+  }
+  100% {
+    border-color: #afa7a7;
+  }
+}
+
+.logBtn {
+  @apply w-full p-[14px] rounded-[40px] bg-[#64B5F6] text-center mt-[30px];
+}
+
+.logBtn a {
+  @apply text-white font-medium font-roboto;
+}
+
